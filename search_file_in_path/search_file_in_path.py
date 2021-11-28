@@ -31,7 +31,7 @@ def search_path(pathname, search_path):
             #debug#print ("------------------------------")
             #result.append(os.path.join(path, filename))
             result.append(path)
-            #debug#print ("Get path info one time" + path)
+            #debug#print ("[D] Get path info one time  : " + path)
     return result
 
 
@@ -54,6 +54,21 @@ def search_file_01(file_name, directory_name):
     return files_found
 
 def main():
+
+    import sys
+    #TODO#Check the input argument info here
+    print ("------------------------------")
+    print ("[D] Get input arguments              : %s" % sys.argv)
+    print ("[D] Get length of input arguments    : %s" % len(sys.argv))
+
+    #i = len(sys.argv)
+    i = 0
+    while (i < len(sys.argv)) :
+        #print ("[D] sys.argv[%d]                 : " % i + sys.argv[i])
+        print ("[D] sys.argv[%d]                      : %s" % (i  ,sys.argv[i]))
+        i = i+1
+    print ("------------------------------")
+
     file_got_after_search = []
     #print (search_file('study.txt', '~/data/myenv'))
     #print (search_file('study.txt', '/home/fshan/data/myenv'))
@@ -71,10 +86,11 @@ def main():
     path01_got_after_search = []
     #path01_got_after_search.append(search_path_01('_vim', '/home/fshan/data/myenv'))
     path01_got_after_search+=(search_path('_vim', '/home/fshan/data/myenv'))
-    print ("Get the [paths] :%s" %path01_got_after_search)
+    print ("Get the [paths] :%s" % path01_got_after_search)
 
     path01_got_after_search+=(search_path('pyim', '/home/fshan/data/myenv'))
-    print ("Get the [paths] :%s" %path01_got_after_search)
+    print ("Get the [paths] :%s" % path01_got_after_search)
+#enf of def main():
 
 if __name__ == "__main__":
     # execute only if run as a script

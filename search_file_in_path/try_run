@@ -1,3 +1,6 @@
-#!/bin/bash
 
-python3 search_file_in_path.py
+#!/bin/bash
+#try
+
+#python3 search_file_in_path.py
+python3 search_file_in_path.py argrument1 argrument2
